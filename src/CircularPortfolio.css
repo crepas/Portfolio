@@ -994,3 +994,133 @@ html, body, #root {
   position: relative;
   z-index: 1;
 }
+
+.tech-stack-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 30px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.tech-category {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.category-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #3498db;
+}
+
+/* 기술 태그 그리드 - 한 줄에 3개 */
+.tech-tags {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3개씩 고정 */
+  gap: 15px;
+}
+
+/* 기술 태그 카드 */
+.tech-tag-with-level {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #e9ecef;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 기술 헤더 - 가로 배치 유지 */
+.tech-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.tech-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  min-width: 0; /* 오버플로우 방지 */
+}
+
+.tech-percentage {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #667eea;
+  white-space: nowrap;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+/* 프로그레스 바 - 별도 줄 */
+.tech-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: -2px; /* 간격 조정 */
+}
+
+.tech-progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 2px;
+}
+
+/* 다크모드 */
+.dark-mode .tech-stack-section {
+  background: linear-gradient(135deg, #2d2d44 0%, #1a1a2e 100%);
+}
+
+.dark-mode .tech-tag-with-level {
+  background: #3a3a52;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .tech-name {
+  color: #ffffff;
+}
+
+.dark-mode .tech-percentage {
+  color: #4facfe;
+}
+
+.dark-mode .tech-progress-bar {
+  background: #2d2d44;
+}
+
+.dark-mode .category-title {
+  color: #ffffff;
+  border-bottom: 2px solid #4facfe;
+}
+
+/* 반응형 (선택사항) */
+@media (max-width: 768px) {
+  .tech-tags {
+    grid-template-columns: repeat(2, 1fr); /* 모바일: 2개씩 */
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-tags {
+    grid-template-columns: 1fr; /* 작은 화면: 1개씩 */
+  }
+}

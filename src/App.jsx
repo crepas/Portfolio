@@ -356,44 +356,41 @@ const CircularPortfolio = () => {
 
     const techStacks = {
       backend: [
-        { name: 'Java', level: 'A' },
-        { name: 'C#', level: 'A+' },
-        { name: 'Go', level: 'C' },
-        { name: 'Spring', level: 'A' },
-        { name: 'Spring Boot', level: 'B' },
-        { name: 'Spring Data JPA', level: 'B' },
-        { name: 'JSP', level: 'B' }
+        { name: 'Java', level: 80 },
+        { name: 'C#', level: 90 },
+        { name: 'Go', level: 50 },
+        { name: 'Spring', level: 80 },
+        { name: 'Spring Boot', level: 70 },
+        { name: 'Spring Data JPA', level: 70 },
+        { name: 'JSP', level: 70 }
       ],
       frontend: [
-        { name: 'JavaScript', level: 'B' },
-        { name: 'React', level: 'B' }
+        { name: 'JavaScript', level: 70 },
+        { name: 'React', level: 70 }
       ],
       database: [
-        { name: 'MySQL', level: 'B' },
-        { name: 'MongoDB', level: 'C' },
-        { name: 'Oracle SQL', level: 'B' }
+        { name: 'MySQL', level: 70 },
+        { name: 'MongoDB', level: 50 },
+        { name: 'Oracle SQL', level: 70 }
       ],
       embedded: [
-        { name: 'C', level: 'A' },
-        { name: 'Arduino', level: 'B' }
+        { name: 'C', level: 80 },
+        { name: 'Arduino', level: 70 }
       ],
       dataScience: [
-        { name: 'Python', level: 'B' },
-        { name: 'Scikit-learn', level: 'C' },
-        { name: 'BeautifulSoup', level: 'C' },
-        { name: 'Pandas', level: 'B' }
+        { name: 'Python', level: 70 },
+        { name: 'Scikit-learn', level: 50 },
+        { name: 'BeautifulSoup', level: 50 },
+        { name: 'Pandas', level: 70 }
       ]
     };
 
     const getLevelColor = (level) => {
-      switch(level) {
-        case 'A+': return 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)';
-        case 'A': return 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)';
-        case 'B': return 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)';
-        case 'C': return 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)';
-        case 'D': return 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)';
-        default: return 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-      }
+      if (level >= 90) return 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'; // A+
+      if (level >= 80) return 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'; // A
+      if (level >= 70) return 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'; // B
+      if (level >= 50) return 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'; // C
+      return 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'; // D
     };
 
     return (
@@ -431,10 +428,19 @@ const CircularPortfolio = () => {
               <div className="tech-tags">
                 {techs.map((tech, idx) => (
                   <div key={idx} className="tech-tag-with-level">
-                    <span className="tech-name">{tech.name}</span>
-                    <span className="tech-level" style={{ background: getLevelColor(tech.level) }}>
-                      {tech.level}
-                    </span>
+                    <div className="tech-header">
+                      <span className="tech-name">{tech.name}</span>
+                      <span className="tech-percentage">{tech.level}%</span>
+                    </div>
+                    <div className="tech-progress-bar">
+                      <div 
+                        className="tech-progress-fill"
+                        style={{ 
+                          width: `${tech.level}%`,
+                          background: getLevelColor(tech.level)
+                        }}
+                      />
+                    </div>
                   </div>
                 ))}
               </div>
