@@ -74,7 +74,6 @@ const CircularPortfolio = () => {
       role: [
         'Spring Boot 기반 백엔드 아키텍처 설계 및 전체 API 개발',
         'OpenAI Whisper API 연동으로 오디오 파일 STT 변환 구현',
-        'Google Cloud Platform(Cloud Run, Cloud SQL) 배포 및 운영',
       ],
       tech: ['Spring Boot', 'MySQL', 'Google Cloud Platform', 'OpenAI Whisper API', 'JWT', 'Swagger', 'Docker'],
       features: [
@@ -94,11 +93,10 @@ const CircularPortfolio = () => {
       team: '3명 (Frontend 1, Backend 1, Fullstack 1)',
       description: '현재 위치 기반 주변 2-5km 반경 내 음식점을 찾고, 리뷰하고, 공유할 수 있는 맛집 추천 서비스입니다. 카카오맵 API와 연동하여 실시간 위치 기반 정보를 제공하고, 사용자 선호도 기반 맞춤형 추천을 제공합니다.',
       role: [
-        'Flutter 기반 모바일 앱 전체 프론트엔드 개발 담당',
+        'Flutter 기반 모바일 앱 프론트엔드 개발 담당',
         '회원가입/로그인, 소셜 로그인 시스템 구현 및 사용자 인증 처리',
         '메인 화면 탭 네비게이션 및 카테고리별 음식점 리스트 구현',
         '위치 기반 검색 및 다중 정렬 기능 (거리순, 좋아요순, 리뷰순)',
-        '필터 시스템 UI/UX 개선 및 실시간 필터 적용'
       ],
       tech: ['Flutter', 'Dart', 'Node.js', 'MongoDB', 'Kakao Map API'],
       features: [
@@ -136,7 +134,6 @@ const CircularPortfolio = () => {
         '러닝 모임 모집 게시판',
         'TIB(Today I Biked) 공유 커뮤니티',
         '정보 공유 게시판 (트레이닝 팁, 장비 리뷰)',
-        '사용자 프로필 및 활동 기록',
         '반응형 웹 디자인',
         '모던한 UI/UX (기존 러닝 사이트 대비 개선)',
         '모임 참가 신청 및 관리 시스템'
