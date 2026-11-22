@@ -410,7 +410,6 @@ const CircularPortfolio = () => {
             한 분야에 정착해 BackEnd면 BackEnd, FrontEnd면 FrontEnd <br/>
             이렇게 깊게 파고드는 것도 좋지만, 데이터사이언스, 보안 등 다양한 분야를 <br/>
             공부하며 경험하고싶기에 욕심쟁이 개발자라고 저를 소개하였습니다! <br/><br/>
-            <span style={{fontSize: '14px'}}>지금 가장 공부하고싶은 분야는 보안입니다!</span>
           </p>
         </div>
 
